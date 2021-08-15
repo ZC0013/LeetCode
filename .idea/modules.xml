@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ACM.iml" filepath="$PROJECT_DIR$/ACM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ArrayQues/ArrayQues.iml" filepath="$PROJECT_DIR$/ArrayQues/ArrayQues.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Template/Template.iml" filepath="$PROJECT_DIR$/Template/Template.iml" />
+    </modules>
+  </component>
+</project>
