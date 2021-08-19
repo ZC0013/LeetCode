@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/LinkNode/LinkNode.iml" filepath="$PROJECT_DIR$/LinkNode/LinkNode.iml" />
       <module fileurl="file://$PROJECT_DIR$/Math/Math.iml" filepath="$PROJECT_DIR$/Math/Math.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReCur/ReCur.iml" filepath="$PROJECT_DIR$/ReCur/ReCur.iml" />
+      <module fileurl="file://$PROJECT_DIR$/StringDemo/StringDemo.iml" filepath="$PROJECT_DIR$/StringDemo/StringDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01/day01.iml" filepath="$PROJECT_DIR$/day01/day01.iml" />
     </modules>
   </component>
