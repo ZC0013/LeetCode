@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * @Created by zhang on 2021/8/21  13:05
  */
-public class LeetCode541_Reverse_String_II {
+public class LC541_Reverse_String_II {
 
     @Test
     public void test(){

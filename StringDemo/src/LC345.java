@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * @Created by zhang on 2021/8/19  21:05
  */
-public class LeetCode345 {
+public class LC345 {
 
     @Test
     public void test(){
