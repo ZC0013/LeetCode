@@ -75,6 +75,10 @@ public class LC912_SortArray {
             arr[index + 1] = tem;
         }
     }
+
+
+
+
     public void insertSort(int[] arr, int left, int right){
         for (int i = left + 1; i <= right; i++) {
             int tem = arr[i];
@@ -125,35 +129,38 @@ public class LC912_SortArray {
 
     }
     public void mergeTwoArrays(int[] nums, int left, int mid, int right, int[] temp){
-        int index = 0;
+
         int t1 = left;
         int t2 = mid+1;
         System.arraycopy(nums,left,temp,left,right+1-left);
-        while( t1 <= mid && t2 <=  right){
-            if(temp[t1] <= temp[t2]){
-                nums[index] = temp[t1];
+        for( int k = left; k <= right; k++){
+            if( t1 == mid + 1 ){
+                nums[k] = temp[t2];
+                t2++;
+            }else if(t2 == right){
+                nums[k] = temp[t1];
+                t1++;
+            }else if( temp[t1] <= temp[t2]){
+                nums[k] = temp[t1];
                 t1++;
             }else {
-                nums[index] = temp[t2];
+                nums[k] = temp[t2];
                 t2++;
             }
-            index++;
-        }
-        for (int i = index; i <= right; i++) {
-            nums[i] = temp[i];
         }
     }
 
+    // 快排
     public void quickSort1(int[] arr){
         int n = arr.length;
         quick(arr, 0 , n-1);
     }
 
     private void quick(int[] arr, int left, int right) {
-        if( right - left <= INSERTION_SORT_THRESHOLD){
-            insertSort(arr,left,right);
-            return;
-        }
+//        if( right - left <= INSERTION_SORT_THRESHOLD){
+//            insertSort(arr,left,right);
+//            return;
+//        }
         int pIndex = partition(arr, left, right);
         quick(arr, left, pIndex - 1);
         quick(arr, pIndex + 1, right);
