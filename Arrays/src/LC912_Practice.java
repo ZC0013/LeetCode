@@ -11,8 +11,9 @@ public class LC912_Practice {
 
     @Test
     public void test(){
-        quick(arr, 0, arr.length-1);
-        System.out.println(Arrays.toString(arr));
+        int[] nums = new int[]{5,2,3,1};
+        sortArray(nums);
+        System.out.println(Arrays.toString(nums));
 
     }
 
@@ -86,6 +87,43 @@ public class LC912_Practice {
         }
         swap(left,lt);
         return lt;
+    }
+
+
+    public int[] sortArray(int[] nums) {
+        int[] temp = new int[nums.length];
+        merge1( nums, temp, 0, nums.length - 1);
+        return nums;
+    }
+
+    public void merge1(int[] nums, int[] temp, int l, int r){
+        if( l < r ){
+            int m = ( l + r ) >>> 1;
+            merge1( nums, temp, l, m);
+            merge1( nums, temp, m+1, r);
+            he1(nums, temp, l, m, r);
+        }
+    }
+
+    public void he1(int[] nums, int[] temp, int l, int m, int r){
+        System.arraycopy(nums, l, temp, l, r-l+1);
+        int t1 = l;
+        int t2 = m+1;
+        for(int i = l; i <= r; i++ ){
+            if( t1 == m + 1 ){
+                nums[i] = temp[t2];
+                t2++;
+            }else if( t2 == r + 1 ){
+                nums[i] = temp[t1];
+                t1++;
+            }else if( temp[t1] <= temp[t2] ){
+                nums[i] = temp[t1];
+                t1++;
+            }else{
+                nums[i] = temp[t2];
+                t2++;
+            }
+        }
     }
 
 }
