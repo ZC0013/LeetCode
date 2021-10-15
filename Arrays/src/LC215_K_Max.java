@@ -13,6 +13,7 @@ public class LC215_K_Max {
         int[] arr = new int[]{3,2,1,5,6,4};
         int kthLargest = findKthLargest(arr, 2);
         System.out.println(kthLargest);
+
     }
 
     Random random = new Random();
