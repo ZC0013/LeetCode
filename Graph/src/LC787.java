@@ -9,7 +9,9 @@ import java.util.*;
 
 public class LC787 {
 
-
+    /*
+    LC787. K 站中转内最便宜的航班
+     */
     @Test
     public void test(){
         int[][] flights = {{0,1,100},{1,2,100},{0,2,500}};
@@ -23,7 +25,7 @@ public class LC787 {
     同时使用map存储每个src节点对应的元素集，简化搜索
 
     方法一： 暴力DFS，
-        1. 首先遍历边矩阵，把所以的出发节点存到一个 map集合中
+        1. 首先遍历边矩阵，把所以的出发节点存到一个 map 集合中
             例如：此时 map 中 0 —— 0, 2   1 —— 1,其中key为出发节点，value为出去节点对应的flights矩阵
         2. 遍历src节点的出发矩阵，如果能在 k 步之内到达目标节点，就与记录的最小值比较返回较小值；如果超过 K 步就跳出递归。
 
@@ -85,9 +87,11 @@ public class LC787 {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{src, 0, vis[src]});
         while (!queue.isEmpty()) {
+            // poll[] 数组的含义：当前节点序号，当前的中转次数，从源节点到当前节点的消耗
             int[] poll = queue.poll();
+            // 判断中转次数是否超过要求，要求最多 k 次中转
             if (poll[1] > k) break;
-            for (int[] next : edge[poll[0]]) {
+            for (int[] next : edge[poll[0]]) {  // next[] 数组：当前节点的所有通路：序号 消耗
                 // 有点类似于迪杰斯特拉算法的更新，主要就是 当 源节点到当前节点的值 + 当前节点值到目标节点值 <= 源节点到目标节点值时，对距离值更新
                 if (vis[next[0]] > poll[2] + next[1]) {
                     vis[next[0]] = poll[2] + next[1];
