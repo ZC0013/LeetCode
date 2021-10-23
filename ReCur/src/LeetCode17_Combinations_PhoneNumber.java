@@ -11,12 +11,13 @@ import java.util.Map;
  */
 public class LeetCode17_Combinations_PhoneNumber {
 
+    /*
+    对于九宫格的手机键盘：输入一串数字，输出它能表示的所有字母组合
+     */
+
     @Test
     public void test(){
         String str = "234";
-        char[] chars = str.toCharArray();
-        String substring = str.substring(1, 3);
-        System.out.println(substring);
         List<String> strings = letterCombinations(str);
         System.out.println(strings);
     }
