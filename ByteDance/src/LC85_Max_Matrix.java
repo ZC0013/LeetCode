@@ -1,5 +1,8 @@
 import org.junit.Test;
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 /**
  * @Created by zhang on 2021/10/20  21:06
  */
@@ -39,21 +42,35 @@ public class LC85_Max_Matrix {
         }
 
         int ret = 0;
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                if (matrix[i][j] == '0') {
-                    continue;
+        for (int j = 0; j < n; j++) { // 对于每一列，使用基于柱状图的方法
+            int[] up = new int[m];
+            int[] down = new int[m];
+
+            Deque<Integer> stack = new LinkedList<Integer>();
+            for (int i = 0; i < m; i++) {
+                while (!stack.isEmpty() && left[stack.peek()][j] >= left[i][j]) {
+                    stack.pop();
                 }
-                int width = left[i][j];
-                int area = width;
-                for (int k = i - 1; k >= 0; k--) {
-                    width = Math.min(width, left[k][j]);
-                    area = Math.max(area, (i - k + 1) * width);
+                up[i] = stack.isEmpty() ? -1 : stack.peek();
+                stack.push(i);
+            }
+            stack.clear();
+            for (int i = m - 1; i >= 0; i--) {
+                while (!stack.isEmpty() && left[stack.peek()][j] >= left[i][j]) {
+                    stack.pop();
                 }
+                down[i] = stack.isEmpty() ? m : stack.peek();
+                stack.push(i);
+            }
+
+            for (int i = 0; i < m; i++) {
+                int height = down[i] - up[i] - 1;
+                int area = height * left[i][j];
                 ret = Math.max(ret, area);
             }
         }
         return ret;
     }
+
 
 }
