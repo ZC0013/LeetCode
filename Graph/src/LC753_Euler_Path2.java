@@ -26,6 +26,7 @@ public class LC753_Euler_Path2 {
     public void test(){
 
         String s = crackSafe(3, 2);
+
         System.out.println(s);
     }
 
