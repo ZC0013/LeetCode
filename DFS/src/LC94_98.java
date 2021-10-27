@@ -6,9 +6,11 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * LC94 二叉树的中序遍历
+ * LC98 检验是否为排序二叉树
  * @Created by zhang on 2021/10/16  19:09
  */
-public class LC144 {
+public class LC94_98 {
 
     /*
     LC94二叉树的中序遍历
@@ -57,12 +59,15 @@ public class LC144 {
     }
 
     public boolean dfs(TreeNode node, long l, long r){
+        // DFS 递归终止条件
         if( node == null ) return true;
 
+        // 判断当前节点是否满足在 (l, r) 的范围内，为开区间
         if( node.val <= l || node.val >= r){
             return false;
         }
 
+        // 递归判断左子树和右子树是否满足， 注意边界的选取
         return dfs(node.left, l, node.val) && dfs( node.right, node.val, r);
     }
 }

@@ -3,6 +3,13 @@ import org.junit.Test;
 import java.util.Arrays;
 
 /**
+ * LC60 排列序列
+ * 给出集合 [1,2,3,...,n]，其所有元素共有 n! 种排列，给定 n 和 k，返回第 k 个排列。
+ * 输入：n = 3, k = 3
+ * 输出："213"
+ * 标签：DFS + 剪切 、递归
+ * 关键点 1：高效剪切 ———— 通过该节点下面的个数进行剪切
+ * 关键点 2：将递归回溯 转变为 循环 方法二：
  * @Created by zhang on 2021/10/27  20:24
  */
 public class LC60 {
