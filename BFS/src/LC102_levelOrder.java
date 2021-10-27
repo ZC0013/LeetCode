@@ -7,13 +7,16 @@ import java.util.List;
 import java.util.Queue;
 
 /**
+ * LC102. 二叉树的层序遍历
+ * 难度：中等
  * @author zhangchuang
  * @create 2021-10-15 9:19 下午
  */
-public class LC102_BFS_Modle {
+public class LC102_levelOrder {
 
     /*
-    LC102. 二叉树的层序遍历
+    最基本的 BFS 算法实现
+    实现：队列 + 循环
      */
 
 
