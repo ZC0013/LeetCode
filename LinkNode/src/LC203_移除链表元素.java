@@ -4,7 +4,7 @@ import org.junit.Test;
  * @author zhangchuang
  * @create 2021-06-21 8:25 下午
  */
-public class LeetCode203_RemoveLinkedListElements {
+public class LC203_移除链表元素 {
 
     @Test
     public void test(){

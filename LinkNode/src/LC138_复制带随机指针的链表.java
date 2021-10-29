@@ -7,7 +7,7 @@ import java.util.Map;
  * @author zhangchuang
  * @create 2021-07-22 10:15 上午
  */
-public class LeetCode138_Copy_List_with_Random_Pointer {
+public class LC138_复制带随机指针的链表 {
 
     @Test
     public void test(){

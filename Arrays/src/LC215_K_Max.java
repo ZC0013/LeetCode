@@ -18,40 +18,41 @@ public class LC215_K_Max {
 
     Random random = new Random();
     public int findKthLargest(int[] nums, int k) {
-        return quickSort(nums, 0, nums.length - 1, k);
-
+        return quickSort(nums, 0, nums.length - 1, nums.length - k);
     }
 
-    public int quickSort(int[] nums, int l, int r, int k){
-        int part = partition(nums, l, r);
-        if( part == nums.length - k ){
-            return nums[part];
-        }else{
-            if( part < nums.length - k ){
-                return quickSort(nums, part + 1, r, k);
-            }else{
-                return quickSort(nums, l, part - 1, k);
-            }
+
+
+    public int quickSort( int[] nums, int l, int r, int k){
+
+
+        int index = quick( nums, l, r);
+        if( index == k ){
+            return nums[k];
+        }else {
+            return index > k ? quickSort( nums, l, index - 1, k) : quickSort( nums, index + 1, r, k);
         }
+
+
     }
 
-    public int partition(int[] nums, int l, int r){
+    public int quick( int[] nums, int l, int r){
         int randomIndex = random.nextInt( r - l + 1) + l;
-        swap(nums, randomIndex, l);
-        int provit = nums[l];
+        int pivot = nums[randomIndex];
+        swap(nums, l, randomIndex);
         int lt = l;
         for( int i = l + 1; i <= r; i++){
-            if( nums[i] < provit){
+            if( nums[i] < pivot){
                 lt++;
                 swap(nums, lt, i);
             }
         }
-        swap(nums, lt, l);
+        swap( nums, lt, l);
         return lt;
     }
 
-
-    public void swap(int[] nums, int i, int j){
+    public void swap( int[] nums, int i, int j){
+        if( i == j ) return;
         int temp = nums[i];
         nums[i] = nums[j];
         nums[j] = temp;

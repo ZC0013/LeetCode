@@ -5,7 +5,7 @@ import java.util.Arrays;
 /**
  * @Created by zhang on 2021/9/22  20:13
  */
-public class LC725_splitListToParts {
+public class LC725_分隔链表 {
 
     @Test
     public void test(){

@@ -6,7 +6,7 @@ import java.util.Random;
 /**
  * @Created by zhang on 2021/9/4  15:17
  */
-public class LC912_SortArray {
+public class LC912_排序数组 {
 
     /*
     主要复习常见的排序方法：
@@ -19,7 +19,9 @@ public class LC912_SortArray {
     int[] arr = {1,3,4,2,5,6,8,10,4,2,9};
     @Test
     public void Sort(){
-        quickSort1(arr);
+//        sortArray(arr);
+        Arrays.sort(arr);
+
         System.out.println(Arrays.toString(arr));
     }
 
@@ -150,38 +152,43 @@ public class LC912_SortArray {
         }
     }
 
-    // 快排
-    public void quickSort1(int[] arr){
-        int n = arr.length;
-        quick(arr, 0 , n-1);
+    Random random = new Random();
+    public int[] sortArray(int[] nums) {
+        quickSort(nums,0, nums.length - 1);
+        return nums;
     }
 
-    private void quick(int[] arr, int left, int right) {
-//        if( right - left <= INSERTION_SORT_THRESHOLD){
-//            insertSort(arr,left,right);
-//            return;
-//        }
-        int pIndex = partition(arr, left, right);
-        quick(arr, left, pIndex - 1);
-        quick(arr, pIndex + 1, right);
+    public void quickSort( int[] nums, int l, int r){
+
+        if( l < r){
+            int index = quick( nums, l, r);
+            quickSort( nums, l, index - 1);
+            quickSort( nums, index + 1, r);
+        }
     }
 
-    private static final Random RANDOM = new Random();
-    private int partition(int[] arr, int left, int right) {
-        int randomIndex =  RANDOM.nextInt(right - left + 1) + left;
-        swap(left, randomIndex);
-
-        // 基准值
-        int pivot = arr[left];
-        int lt = left;
-
-        for(int i = left + 1; i <= right; i++){
-            if(arr[i] < pivot){
+    public int quick( int[] nums, int l, int r){
+        int randomIndex = random.nextInt( r - l + 1) + l;
+        int pivot = nums[randomIndex];
+        swap( nums, randomIndex, l);
+        int lt = l;
+        for( int i = l + 1; i <= r; i++){
+            // lt 为循环不变量 保证
+            // all in [ l+1, lt ] < pivot
+            // all in [ lt+1, r] > pivot
+            if( nums[i] < pivot ){
                 lt++;
-                swap(i,lt);
+                swap( nums, i, lt);
             }
         }
-        swap(left,lt);
+        swap(nums, l, lt);
         return lt;
     }
+
+    public void swap( int[] nums, int i, int j){
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
 }
