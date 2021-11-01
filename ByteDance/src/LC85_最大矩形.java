@@ -6,7 +6,7 @@ import java.util.LinkedList;
 /**
  * @Created by zhang on 2021/10/20  21:06
  */
-public class LC85_Max_Matrix {
+public class LC85_最大矩形 {
 
     /*
     LC85 最大矩形

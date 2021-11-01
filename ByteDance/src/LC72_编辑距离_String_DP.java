@@ -3,7 +3,7 @@ import org.junit.Test;
 /**
  * @Created by zhang on 2021/10/20  19:51
  */
-public class LC72_DP_String {
+public class LC72_编辑距离_String_DP {
 
     @Test
     public void test(){

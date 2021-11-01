@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/StringDemo/StringDemo.iml" filepath="$PROJECT_DIR$/StringDemo/StringDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/day01/day01.iml" filepath="$PROJECT_DIR$/day01/day01.iml" />
       <module fileurl="file://$PROJECT_DIR$/动态规划/动态规划.iml" filepath="$PROJECT_DIR$/动态规划/动态规划.iml" />
+      <module fileurl="file://$PROJECT_DIR$/操作系统/操作系统.iml" filepath="$PROJECT_DIR$/操作系统/操作系统.iml" />
     </modules>
   </component>
 </project>
