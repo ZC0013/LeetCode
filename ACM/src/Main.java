@@ -62,7 +62,7 @@ public class Main {
         //1,2,3,4,5
         Scanner scanner = new Scanner(System.in);
         //以字符串形式作为输入
-        String str = scanner.next().toString();
+        String str = scanner.next();
         //通过分隔符将其转为字符串数组
         String[] arr  = str.split(",");
         //初始化一个整数数组

@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * @Created by zhang on 2021/10/26  22:48
  */
-public class LC22 {
+public class LC22_括号生成 {
 
     @Test
     public void test(){
