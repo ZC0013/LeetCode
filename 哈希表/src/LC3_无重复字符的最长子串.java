@@ -13,6 +13,7 @@ public class LC3_无重复字符的最长子串 {
     public void test(){
         int res = lengthOfLongestSubstring("bbbc");
         System.out.println(res);
+
     }
 
     public int lengthOfLongestSubstring(String s) {
