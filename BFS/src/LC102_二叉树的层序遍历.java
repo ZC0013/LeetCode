@@ -12,7 +12,7 @@ import java.util.Queue;
  * @author zhangchuang
  * @create 2021-10-15 9:19 下午
  */
-public class LC102_levelOrder {
+public class LC102_二叉树的层序遍历 {
 
     /*
     最基本的 BFS 算法实现

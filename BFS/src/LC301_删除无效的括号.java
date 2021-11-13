@@ -15,7 +15,7 @@ import java.util.Set;
  * 标签：字符串 、回溯、 广度遍历
  * @Created by zhang on 2021/10/27  13:38
  */
-public class LC301 {
+public class LC301_删除无效的括号 {
 
     /*
     删除最少的字符串，并且返回所有的答案，最佳的方法就是广度遍历删除，并且使用 HashSet 去重提高效率。

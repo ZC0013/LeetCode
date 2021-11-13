@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/ACM/ACM.iml" filepath="$PROJECT_DIR$/ACM/ACM.iml" />
       <module fileurl="file://$PROJECT_DIR$/Arrays/Arrays.iml" filepath="$PROJECT_DIR$/Arrays/Arrays.iml" />
       <module fileurl="file://$PROJECT_DIR$/BFS/BFS.iml" filepath="$PROJECT_DIR$/BFS/BFS.iml" />
       <module fileurl="file://$PROJECT_DIR$/BinarySerach/BinarySerach.iml" filepath="$PROJECT_DIR$/BinarySerach/BinarySerach.iml" />
@@ -13,7 +14,14 @@
       <module fileurl="file://$PROJECT_DIR$/Math/Math.iml" filepath="$PROJECT_DIR$/Math/Math.iml" />
       <module fileurl="file://$PROJECT_DIR$/ReCur/ReCur.iml" filepath="$PROJECT_DIR$/ReCur/ReCur.iml" />
       <module fileurl="file://$PROJECT_DIR$/StringDemo/StringDemo.iml" filepath="$PROJECT_DIR$/StringDemo/StringDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/day01/day01.iml" filepath="$PROJECT_DIR$/day01/day01.iml" />
+      <module fileurl="file://$PROJECT_DIR$/二分查找/二分查找.iml" filepath="$PROJECT_DIR$/二分查找/二分查找.iml" />
+      <module fileurl="file://$PROJECT_DIR$/二叉树/二叉树.iml" filepath="$PROJECT_DIR$/二叉树/二叉树.iml" />
+      <module fileurl="file://$PROJECT_DIR$/剑指Offer/剑指Offer.iml" filepath="$PROJECT_DIR$/剑指Offer/剑指Offer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/动态规划/动态规划.iml" filepath="$PROJECT_DIR$/动态规划/动态规划.iml" />
+      <module fileurl="file://$PROJECT_DIR$/单调栈/单调栈.iml" filepath="$PROJECT_DIR$/单调栈/单调栈.iml" />
+      <module fileurl="file://$PROJECT_DIR$/哈希表/哈希表.iml" filepath="$PROJECT_DIR$/哈希表/哈希表.iml" />
+      <module fileurl="file://$PROJECT_DIR$/回溯法/回溯法.iml" filepath="$PROJECT_DIR$/回溯法/回溯法.iml" />
+      <module fileurl="file://$PROJECT_DIR$/操作系统/操作系统.iml" filepath="$PROJECT_DIR$/操作系统/操作系统.iml" />
     </modules>
   </component>
 </project>

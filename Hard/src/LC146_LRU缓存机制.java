@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * @Created by zhang on 2021/10/18  22:55
  */
-public class LC146_LRU {
+public class LC146_LRU缓存机制 {
 
     /*
     LC146 LRU 缓存机制
@@ -37,6 +37,7 @@ public class LC146_LRU {
 }
 
 class LRUCache {
+    // 双向链表
     class DLinkedNode {
         int key;
         int value;
@@ -51,11 +52,14 @@ class LRUCache {
         }
     }
 
+    // 哈希表 ：缓存数据的键值对在链表中的位置
     private Map<Integer, DLinkedNode> cache = new HashMap<Integer, DLinkedNode>();
-    private int size;
-    private int capacity;
+    private int size;       // 当前 LRU 缓存的节点数
+    private int capacity;   // LRU 缓存的初始容量
+    // 添加伪头部和伪尾部，避免检测相邻节点的存在性
     private DLinkedNode head, tail;
 
+    // 初始化 LRU缓存
     public LRUCache(int capacity) {
         this.size = 0;
         this.capacity = capacity;
@@ -65,7 +69,7 @@ class LRUCache {
         head.next = tail;
         tail.prev = head;
     }
-
+    // 如果关键字 key 存在于缓存中，则返回关键字的值(并将其移动到头部)，否则返回 -1
     public int get(int key) {
         DLinkedNode node = cache.get(key);
         if (node == null) {
@@ -75,6 +79,8 @@ class LRUCache {
         moveToHead(node);
         return node.value;
     }
+    // 如果关键字已经存在，则变更其数据值；如果关键字不存在，则插入该组「关键字-值」。
+    // 当缓存容量达到上限时，它应该在写入新数据之前删除最久未使用的数据值，从而为新的数据值留出空间。
 
     public void put(int key, int value) {
         DLinkedNode node = cache.get(key);
@@ -112,7 +118,7 @@ class LRUCache {
         node.prev.next = node.next;
         node.next.prev = node.prev;
     }
-
+    // 移动到头部，可以转化成 删除当前节点，然后再把当前节点添加到头部
     private void moveToHead(DLinkedNode node) {
         removeNode(node);
         addToHead(node);
