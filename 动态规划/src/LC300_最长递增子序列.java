@@ -16,6 +16,7 @@ public class LC300_最长递增子序列 {
         int res = 0;
         for(int num : nums) {
             int i = 0, j = res;
+            // 在tails中寻找第一个大于 num 的下标
             while(i < j) {
                 int m = (i + j) / 2;
                 if(tails[m] < num) i = m + 1;
