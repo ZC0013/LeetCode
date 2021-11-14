@@ -15,7 +15,7 @@ public class LC34_在排序数组中查找元素的第一个和最后一个位�
         if(l == r) return new int[]{-1, -1};
         return new int[]{l, r-1};
     }
-
+    // l 位置为第一个大于等于目标值的下标
     public int bs(int[] nums, double target) {
         int l = 0, h = nums.length-1;
         while(l <= h){
