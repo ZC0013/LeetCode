@@ -7,7 +7,7 @@ public class LC5_最长回文字符串 {
 
     @Test
     public void test(){
-        String res = longestPalindrome("adadc");
+        String res = longestPalindrome2("cbbd");
         System.out.println(res);
     }
 
@@ -34,6 +34,34 @@ public class LC5_最长回文字符串 {
             ++right;
         }
         return right - left - 1;
+    }
+
+    public String longestPalindrome2(String s) {
+        String res = "";
+        // 循环遍历字符串 ，依次从中间往两边进行查找
+        // 时间复杂度 O(N2)
+        for( int i = 0; i < s.length(); i++ ){
+            // 字符串为奇数情况
+            int l = i - 1, r = i + 1;
+            while( l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r) ){
+                l--;
+                r++;
+            }
+            if( res.length() < ( r - l - 1) ){
+                res = s.substring(l+1, r);
+            }
+            // 字符串为偶数情况
+            l = i;
+            r = i + 1;
+            while( l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r) ){
+                l--;
+                r++;
+            }
+            if( res.length() < ( r - l - 1) ){
+                res = s.substring(l+1, r);
+            }
+        }
+        return res;
     }
 
 }
