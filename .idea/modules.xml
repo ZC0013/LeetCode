@@ -16,6 +16,7 @@
       <module fileurl="file://$PROJECT_DIR$/StringDemo/StringDemo.iml" filepath="$PROJECT_DIR$/StringDemo/StringDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/二分查找/二分查找.iml" filepath="$PROJECT_DIR$/二分查找/二分查找.iml" />
       <module fileurl="file://$PROJECT_DIR$/二叉树/二叉树.iml" filepath="$PROJECT_DIR$/二叉树/二叉树.iml" />
+      <module fileurl="file://$PROJECT_DIR$/前缀和/前缀和.iml" filepath="$PROJECT_DIR$/前缀和/前缀和.iml" />
       <module fileurl="file://$PROJECT_DIR$/剑指Offer/剑指Offer.iml" filepath="$PROJECT_DIR$/剑指Offer/剑指Offer.iml" />
       <module fileurl="file://$PROJECT_DIR$/动态规划/动态规划.iml" filepath="$PROJECT_DIR$/动态规划/动态规划.iml" />
       <module fileurl="file://$PROJECT_DIR$/单调栈/单调栈.iml" filepath="$PROJECT_DIR$/单调栈/单调栈.iml" />
