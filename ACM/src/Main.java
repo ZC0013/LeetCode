@@ -19,6 +19,7 @@ public class Main {
     while( sc.hasNext() ){
         int n = sc.nextInt();   // 下一个 int
         int l = sc.nextLong();  // 下一个 long
+        String s = sc.next();
     }
      */
 
