@@ -9,7 +9,7 @@ import java.util.Map;
 public class LC146_LRU缓存机制 {
 
     /*
-    LC146 LRU 缓存机制
+    LC146 LRU 缓存机制 Least Recently Used
     实现最近最少使用的缓存机制
     使用 哈希表 + 双向链表 实现，类似于 java 中的LinkedHashMap
     双向链表：使用双向链表来存储键值对，靠近头部的是最近使用的，靠近尾部的是最久未被使用的；
