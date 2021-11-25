@@ -38,9 +38,8 @@ public class Main {
      * 1 6 5 2 2 5
      *
      */
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
+    /*
+    Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt();
         while (t>0){
             int n = scanner.nextInt();
@@ -50,6 +49,14 @@ public class Main {
                 a[i] = scanner.nextInt();
             System.out.println(t +" "+ n +" "+ k +" "+ Arrays.toString(a));
             t--;
+        }
+     */
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        while( sc.hasNext() ){
+            String str = sc.nextLine();
+            System.out.println( str );
         }
 
     }
